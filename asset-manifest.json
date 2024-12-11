@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ReactTodolList/static/css/main.916685e8.css",
+    "main.js": "/ReactTodolList/static/js/main.42f45a06.js",
+    "index.html": "/ReactTodolList/index.html",
+    "main.916685e8.css.map": "/ReactTodolList/static/css/main.916685e8.css.map",
+    "main.42f45a06.js.map": "/ReactTodolList/static/js/main.42f45a06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.916685e8.css",
+    "static/js/main.42f45a06.js"
+  ]
+}
