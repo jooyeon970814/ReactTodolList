@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useStore from "../store";
 
 const TimeComponent = () => {
-  const { currentTime, temperature, updateCurrentTime, initWeather, isMobile } =
+  const { currentTime, temperature, updateCurrentTime, initWeather } =
     useStore();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const TimeComponent = () => {
   };
 
   return (
-    <div className={`${isMobile ? "mtime-container" : "time-container"}`}>
+    <div className="time-container">
       <div className="time">{formatTime(currentTime)}</div>
       <div className="temperature-info">
         {temperature.current !== null && (

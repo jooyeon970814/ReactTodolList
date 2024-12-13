@@ -26,8 +26,8 @@ const useStore = create((set, get) => ({
   // 기본 상태
   User: localStorage.getItem("User") || "Guest",
   date: new Date(),
-  watherBar:
-    Number(localStorage.getItem(`${formatDate(new Date())}-wather`)) || 0,
+  WaterBar:
+    Number(localStorage.getItem(`${formatDate(new Date())}-Water`)) || 0,
   currentTime: new Date(),
   basePath: getBasePath(),
   isMobile: checkIsMobile(),
@@ -102,34 +102,34 @@ const useStore = create((set, get) => ({
 
   setDate: (newDate) => {
     const formattedDate = formatDate(newDate);
-    const savedWatherScore =
-      Number(localStorage.getItem(`${formattedDate}-wather`)) || 0;
+    const savedWaterScore =
+      Number(localStorage.getItem(`${formattedDate}-Water`)) || 0;
     set({
       date: new Date(newDate),
-      watherBar: savedWatherScore,
+      WaterBar: savedWaterScore,
     });
   },
 
   // 워터바 관련 액션들
-  setwatherBar: (wather) => {
-    const dateKey = `${formatDate(get().date)}-wather`;
-    localStorage.setItem(dateKey, wather.toString());
-    set({ watherBar: wather });
+  setWaterBar: (Water) => {
+    const dateKey = `${formatDate(get().date)}-Water`;
+    localStorage.setItem(dateKey, Water.toString());
+    set({ WaterBar: Water });
   },
 
-  getWatherScore: (date) => {
-    const dateKey = `${formatDate(date)}-wather`;
+  getWaterScore: (date) => {
+    const dateKey = `${formatDate(date)}-Water`;
     return Number(localStorage.getItem(dateKey)) || 0;
   },
 
-  startwatherBar: () => {
+  startWaterBar: () => {
     const interval = setInterval(() => {
       set((state) => {
-        if (state.watherBar < 100) {
-          const newValue = state.watherBar + 10;
-          const dateKey = `${formatDate(state.date)}-wather`;
+        if (state.WaterBar < 100) {
+          const newValue = state.WaterBar + 10;
+          const dateKey = `${formatDate(state.date)}-Water`;
           localStorage.setItem(dateKey, newValue.toString());
-          return { watherBar: newValue };
+          return { WaterBar: newValue };
         } else {
           clearInterval(interval);
           return state;

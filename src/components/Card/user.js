@@ -35,8 +35,9 @@ const UserCard = () => {
         {User === "Guest" ? (
           <input
             type="text"
+            style={{ width: "90%" }}
             placeholder="YOUR NAME"
-            size="9"
+            size="12"
             value={InputVaule}
             onChange={InputChange}
           />
@@ -44,8 +45,9 @@ const UserCard = () => {
         <div className="line-h25">
           {User === "Guest" ? (
             <>
-              <p className="f-b f-s white">{User}님, 안녕하세요.</p>
-              <p className="f-s white f-c">닉네임을 입력해주세요</p>
+              <p className="f-b f-s white">{User}님,</p>
+              <p className="f-b f-s white">안녕하세요.</p>
+              <p className="f-s white ">이름을 입력해주세요</p>
             </>
           ) : (
             <div className="m-x">

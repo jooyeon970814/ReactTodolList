@@ -6,23 +6,28 @@
   position: relative;
   max-height: calc(100vh - 20px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
+/* Scrollbar Styling */
+.App::-webkit-scrollbar {
+  width: 6px;
+}
+
+.App::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
 .sidebar {
-  min-width: 350px;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
-.msidebar {
-  margin: 0 auto;
   display: flex;
-  padding: 20px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 /* Card Container Styles */
@@ -30,29 +35,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: calc(100vh - 20px);
-  overflow-y: auto;
-}
-
-.mcard-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Scrollbar Styling */
-.card-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.card-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.card-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
 }
 
 /* Font Sizes */
@@ -105,7 +87,9 @@
   color: white;
   margin-top: 10px;
 }
-
+.p-10 {
+  padding: 10px;
+}
 /* Margins */
 .m-b {
   margin-bottom: 10px;
@@ -119,13 +103,21 @@
 .m-t {
   margin-top: 10px;
 }
-
+.m-h {
+  min-height: 10vh;
+}
 /* Flexbox Utilities */
 .flex {
   display: flex;
 }
+.flex-row {
+  flex-direction: row;
+}
 .gap-10 {
   gap: 10px;
+}
+.s-a {
+  justify-content: space-around;
 }
 .s-b {
   justify-content: space-between;
@@ -133,7 +125,9 @@
 .flex-end {
   align-items: flex-end;
 }
-
+.w-full {
+  width: 100%;
+}
 /* List Styles */
 .list {
   margin-right: 5px;

@@ -5,7 +5,7 @@ import Calendar from "./components/Calendar";
 import UserCard from "./components/Card/user";
 import PictureCard from "./components/Card/picture";
 import useStore from "./store";
-import WatherCard from "./components/Card/wather";
+import WaterCard from "./components/Card/water";
 import TodolistCard from "./components/Card/todolist";
 import "./styles/style.css";
 import "./styles/root.css";
@@ -87,23 +87,26 @@ export const App = () => {
     // 이미지가 로드되지 않았으면 로딩 스피너를 보여줍니다.
     <div className="loading-spinner">Loading...</div>
   ) : (
-    <div className="App" style={{ marginBottom: "1rem" }}>
+    <div className="App">
       <Reset />
-      <main className={`${isMobile ? "msidebar" : "sidebar"}`}>
-        <div className={`${isMobile ? "mcard-container" : "card-container"}`}>
-          <div>
+      <main className="flex flex-row s-a m-x p-10">
+        <article className="sidebar m-x">
+          <div className="card-container">
             <TimeComponent />
+            <div className="flex gap-10">
+              <UserCard />
+              <PictureCard url={bgImage} /> {/* 배경 이미지가 로드되면 전달 */}
+            </div>
+            <WaterCard min={0} max={100} value={progress} />
+            <Calendar currentDate={date} onDateChange={handleDateChange} />
+            {isMobile && <TodolistCard />}
           </div>
-          <div className="flex gap-10">
-            <UserCard />
-            <PictureCard url={bgImage} /> {/* 배경 이미지가 로드되면 전달 */}
-          </div>
-          <WatherCard min={0} max={100} value={progress} />
-          <Calendar currentDate={date} onDateChange={handleDateChange} />
-          <TodolistCard />
-          {/* 기존 컨텐츠 */}
-          <div style={{ height: "30px" }} aria-hidden="true" />
-        </div>
+        </article>
+        {!isMobile && (
+          <article className="w-full  m-x">
+            <TodolistCard />
+          </article>
+        )}
       </main>
     </div>
   );

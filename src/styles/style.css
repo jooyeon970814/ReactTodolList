@@ -11,33 +11,38 @@
 
 /* 시간 컴포넌트 */
 .time-container {
+  width: 300px;
   text-align: right;
+  padding: 10px;
   color: #ffffffe0;
   font-family: "Inter", sans-serif;
-  padding: 1.5rem;
   border-radius: 16px;
   background: rgba(37, 37, 37, 0.1);
   backdrop-filter: blur(10px);
   font-family: Arial, sans-serif;
-  position: fixed;
-  right: 8%;
-}
-
-.mtime-container {
-  padding: 20px;
-  color: #ffffffe0;
-  background: rgba(37, 37, 37, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(2px);
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .time {
-  font-size: 64px;
+  font-size: 54px;
+  text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
 }
+.temperature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  font-size: 14px;
+}
 
+.temperature-info span {
+  display: block;
+}
 /* 유저 카드 */
 .userCard {
   width: 155px;
@@ -77,16 +82,15 @@
   border-radius: 15px;
 }
 
-/* 날씨 카드 */
-.WatherCard {
-  width: 330px;
+.WaterCard {
+  width: 320px;
   padding: 10px 20px;
   background-color: rgba(14, 14, 14, 0.7);
   box-sizing: border-box;
   border-radius: 15px;
   float: left;
 }
-.wather-container {
+.Water-container {
   width: 100%;
   padding: 20px;
   display: flex;
@@ -94,9 +98,10 @@
   align-items: center;
 }
 
-.wather-slider {
+.Water-slider {
   width: 100%;
   height: 8px;
+  appearance: none;
   -webkit-appearance: none;
   background: #ddd;
   outline: none;
@@ -104,31 +109,31 @@
   transition: background 0.3s ease;
 }
 
-.wather-slider::-webkit-slider-runnable-track {
+.Water-slider::-webkit-slider-runnable-track {
   background: #ddd;
   height: 8px;
   border-radius: 5px;
 }
-.wather-slider[data-thumb="drink_0"]::-webkit-slider-thumb {
+.Water-slider[data-thumb="drink_0"]::-webkit-slider-thumb {
   background-image: var(--drink-0-bg-image);
 }
 
-.wather-slider[data-thumb="drink_1"]::-webkit-slider-thumb {
+.Water-slider[data-thumb="drink_1"]::-webkit-slider-thumb {
   background-image: var(--drink-1-bg-image);
 }
 
-.wather-slider[data-thumb="drink_2"]::-webkit-slider-thumb {
+.Water-slider[data-thumb="drink_2"]::-webkit-slider-thumb {
   background-image: var(--drink-2-bg-image);
 }
 
-.wather-slider[data-thumb="drink_3"]::-webkit-slider-thumb {
+.Water-slider[data-thumb="drink_3"]::-webkit-slider-thumb {
   background-image: var(--drink-3-bg-image);
 }
 
-.wather-slider[data-thumb="drink_4"]::-webkit-slider-thumb {
+.Water-slider[data-thumb="drink_4"]::-webkit-slider-thumb {
   background-image: var(--drink-4-bg-image);
 }
-.wather-slider::-webkit-slider-thumb {
+.Water-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 30px;
   height: 30px;
@@ -138,38 +143,27 @@
   margin-top: -10px;
 }
 
-.wather-slider::-moz-wather-track {
+.Water-slider::-moz-water-track {
   background: #ddd;
   height: 8px;
   border-radius: 5px;
 }
 
-.wather-labels {
+.Water-labels {
   margin-top: 10px;
 }
-.water-img {
+.Water-img {
   display: flex;
   flex-direction: row;
 }
 
-.water-img img {
+.Water-img img {
   width: 30px;
 }
-.temperature-info {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 5px;
-  font-size: 14px;
-}
 
-.temperature-info span {
-  display: block;
-}
-
-/* 투두리스트 카드 */
 .todoListCard {
-  width: 330px;
+  width: 100%;
+  height: 100%;
   padding: 30px 30px;
   background-color: rgba(14, 14, 14, 0.7);
   border-radius: 15px;

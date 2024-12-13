@@ -65,13 +65,16 @@ const TodolistCard = () => {
 
   return (
     <div className="todoListCard">
-      <p className="state f-s">
-        <span className="list">●</span> on going <span className="list">|</span>
-        <span className="list yellow">●</span> finished
-      </p>
-      <h3 className="h-3">TO-DO LIST</h3>
-      <p className="f-s m-b2 f-c">{formatDisplayDate(date)}</p>
       <div className="line-h25">
+        <div>
+          <p className="state f-s">
+            <span className="list">●</span> on going{" "}
+            <span className="list">|</span>
+            <span className="list yellow">●</span> finished
+          </p>
+          <h3 className="h-3">TO-DO LIST</h3>
+          <p className="f-s m-b2 f-c">{formatDisplayDate(date)}</p>
+        </div>
         {User === "Guest" ? (
           <>
             <p className="f-b f-s white">{User}님, 안녕하세요.</p>
@@ -79,7 +82,7 @@ const TodolistCard = () => {
           </>
         ) : (
           <>
-            <ul className="m-b">
+            <ul className="m-b min-h">
               {todos.map((item, index) => (
                 <li
                   key={index}
@@ -104,10 +107,10 @@ const TodolistCard = () => {
           </>
         )}
       </div>
-      <form onSubmit={Submit} className="border-b-white">
-        <div className="line-h25">
+      <form onSubmit={Submit} className="border-b-white m-h flex flex-end">
+        <div className="line-h25 w-full">
           {User === "Guest" ? null : (
-            <div className="flex flex-end s-b">
+            <div className="flex flex-end s-b ">
               <input
                 type="text"
                 placeholder="Write down your list"

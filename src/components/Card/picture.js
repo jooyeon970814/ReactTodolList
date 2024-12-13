@@ -4,7 +4,7 @@ const PictureCard = ({ url }) => {
   return (
     <div className="pictureCard">
       <figure>
-        <img className="Image" src={`${url}`} />
+        <img className="Image" src={`${url}`} alt="" />
         <figcaption
           style={{
             position: "absolute",
