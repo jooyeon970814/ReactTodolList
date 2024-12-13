@@ -110,7 +110,7 @@ const WaterCard = ({ min = 0, max = 100, step = 10 }) => {
               onClick={() => handleImageClick(index + 1)}
             >
               <img
-                src={getImagePath(`Water_${getImageStatus(index + 1)}.png`)}
+                src={getImagePath(`water_${getImageStatus(index + 1)}.png`)}
                 width="30px"
                 className={getImageStatus(index + 1) === "on" ? "fin" : ""}
                 alt={`Water Drop ${index + 1}`}
