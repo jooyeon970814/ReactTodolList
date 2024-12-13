@@ -50,9 +50,7 @@ const UserCard = () => {
           ) : (
             <div className="m-x">
               <span className="f-b f-s white flex">
-                <p style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
-                  {User}
-                </p>
+                <p className="text-over">{User}</p>
                 <p>님,</p>
               </span>
               <p className="f-b f-s white">안녕하세요.</p>
