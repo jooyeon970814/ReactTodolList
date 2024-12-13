@@ -16,6 +16,7 @@ export const StyledCalendar = styled(Calendar)`
   background-color: rgba(14, 14, 14, 0.7);
   border-radius: 15px;
   color: #fff;
+  border: none;
 
   button {
     color: #fff;
