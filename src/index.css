@@ -1,14 +1,13 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
   background-image: url(https://bellayujin.github.io/toDoList/image/backwall.jpg);
   transition: background-image 1s ease-in-out;
   background-color: rgba(0, 0, 0, 0.1);
-  background-size: cover;
 }
 
 code {

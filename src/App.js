@@ -87,7 +87,7 @@ export const App = () => {
     // 이미지가 로드되지 않았으면 로딩 스피너를 보여줍니다.
     <div className="loading-spinner">Loading...</div>
   ) : (
-    <div className="App">
+    <div className="App" style={{ marginBottom: "1rem" }}>
       <Reset />
       <main className={`${isMobile ? "msidebar" : "sidebar"}`}>
         <div className={`${isMobile ? "mcard-container" : "card-container"}`}>
@@ -101,6 +101,8 @@ export const App = () => {
           <WatherCard min={0} max={100} value={progress} />
           <Calendar currentDate={date} onDateChange={handleDateChange} />
           <TodolistCard />
+          {/* 기존 컨텐츠 */}
+          <div style={{ height: "30px" }} aria-hidden="true" />
         </div>
       </main>
     </div>
