@@ -50,15 +50,13 @@
 }
 
 .userCard input {
-  top: 20px;
-  left: 15px;
   background: transparent;
   border: none;
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
-  border-bottom: 1px solid #555555;
+  border-bottom: 1px solid #ffffff73;
   outline: none;
-  padding: 10px;
+  padding: 5px;
   color: white;
 }
 
