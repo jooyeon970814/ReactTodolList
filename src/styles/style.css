@@ -1,0 +1,286 @@
+/* 공통 로딩 스타일 */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #00000075;
+  z-index: 9999;
+}
+
+/* 시간 컴포넌트 */
+.time-container {
+  text-align: right;
+  color: #ffffffe0;
+  font-family: "Inter", sans-serif;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(37, 37, 37, 0.1);
+  backdrop-filter: blur(10px);
+  font-family: Arial, sans-serif;
+  position: fixed;
+  right: 8%;
+}
+
+.mtime-container {
+  padding: 20px;
+  color: #ffffffe0;
+  background: rgba(37, 37, 37, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(2px);
+  font-family: Arial, sans-serif;
+}
+
+.time {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 유저 카드 */
+.userCard {
+  width: 155px;
+  height: 155px;
+  padding: 20px;
+  background-color: rgba(14, 14, 14, 0.7);
+  box-sizing: border-box;
+  border-radius: 15px;
+  float: left;
+}
+
+.userCard input {
+  top: 20px;
+  left: 15px;
+  background: transparent;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  border-bottom: 1px solid #555555;
+  outline: none;
+  padding: 10px;
+  color: white;
+}
+
+/* 사진 카드 */
+.pictureCard {
+  width: 155px;
+  height: 155px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  float: left;
+  position: relative;
+}
+
+.Image {
+  width: 155px;
+  height: 155px;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+/* 날씨 카드 */
+.WatherCard {
+  width: 330px;
+  padding: 10px 20px;
+  background-color: rgba(14, 14, 14, 0.7);
+  box-sizing: border-box;
+  border-radius: 15px;
+  float: left;
+}
+.wather-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wather-slider {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  background: #ddd;
+  outline: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.wather-slider::-webkit-slider-runnable-track {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+}
+.wather-slider[data-thumb="drink_0"]::-webkit-slider-thumb {
+  background-image: var(--drink-0-bg-image);
+}
+
+.wather-slider[data-thumb="drink_1"]::-webkit-slider-thumb {
+  background-image: var(--drink-1-bg-image);
+}
+
+.wather-slider[data-thumb="drink_2"]::-webkit-slider-thumb {
+  background-image: var(--drink-2-bg-image);
+}
+
+.wather-slider[data-thumb="drink_3"]::-webkit-slider-thumb {
+  background-image: var(--drink-3-bg-image);
+}
+
+.wather-slider[data-thumb="drink_4"]::-webkit-slider-thumb {
+  background-image: var(--drink-4-bg-image);
+}
+.wather-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+.wather-slider::-moz-wather-track {
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.wather-labels {
+  margin-top: 10px;
+}
+.water-img {
+  display: flex;
+  flex-direction: row;
+}
+
+.water-img img {
+  width: 30px;
+}
+.temperature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.temperature-info span {
+  display: block;
+}
+
+/* 투두리스트 카드 */
+.todoListCard {
+  width: 330px;
+  padding: 30px 30px;
+  background-color: rgba(14, 14, 14, 0.7);
+  border-radius: 15px;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.todoInput {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  text-align: left;
+  padding: 5px 10px;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 10px;
+}
+
+.todoListCard .state {
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+/* 모달 스타일 */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 버튼 스타일 */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.confirm-btn:hover {
+  background-color: #388e3c;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
